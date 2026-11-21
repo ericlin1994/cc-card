@@ -581,6 +581,13 @@
         font-size:13px;font-weight:800;color:var(--navy);letter-spacing:.10em}
   #market .mk-city:first-child{margin-top:0}
   #market .mk-city::after{content:"";flex:1;height:1px;background:rgba(31,58,52,.14)}
+  #market .mk-waitbox{background:#fff;border:1px solid rgba(31,58,52,.10);border-radius:14px;padding:12px 14px 8px}
+  #market .mk-waitbox h4{margin:0 0 2px;font-size:14px;color:var(--navy);letter-spacing:.04em}
+  #market .mk-waitnote{margin:0 0 6px;font-size:12px;color:var(--muted);line-height:1.6}
+  #market .mk-waitrow{display:grid;grid-template-columns:1fr auto;gap:10px;padding:6px 0;
+        border-top:1px solid rgba(31,58,52,.08);font-size:13px}
+  #market .mk-waitrow span{color:var(--navy);font-weight:700}
+  #market .mk-waitrow b{color:var(--muted);font-weight:700}
   #market .mk-card{background:#fff;border:1px solid rgba(31,58,52,.10);border-radius:14px;padding:12px 14px 10px}
   #market .mk-card h4{margin:0 0 6px;font-size:16px;color:var(--navy);letter-spacing:.04em}
   #market .mk-row{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:baseline;
@@ -601,14 +608,14 @@
   </style>
   <section id="market" hidden>
   <div class="sec-title">MARKET｜<em>近期行情</em></div>
-  <p class="mk-sub">依內政部實價登錄整理的台北市與台中市成交行情（萬/坪），單價為房屋本身單價、不含車位；逐期累積，僅供參考。</p>
+  <p class="mk-sub">依內政部實價登錄整理的台北市與台中市成交行情（萬/坪），單價為房屋本身單價、不含車位；本期成交筆數不足 10 筆的行政區只列累積筆數，逐期補上。</p>
   <div class="mk-grid"></div>
   <div class="mk-meta"></div>
   <p class="mk-foot">本行情為歷史實價登錄統計，非即時報價；最新行情請直接詢問。標示「參考值」者樣本數較少，僅供初步參考。</p>
   </section>
   <script>
   (function(){
-    var DIST = ["信義區", "大安區", "中山區", "內湖區", "南屯區", "西屯區", "北屯區", "西區"];
+    var DIST = ["中正區", "大同區", "中山區", "松山區", "大安區", "萬華區", "信義區", "士林區", "北投區", "內湖區", "南港區", "文山區", "中區", "東區", "南區", "西區", "北區", "西屯區", "南屯區", "北屯區", "豐原區", "大里區", "太平區", "清水區", "沙鹿區", "梧棲區", "后里區", "神岡區", "潭子區", "大雅區", "新社區", "石岡區", "東勢區", "和平區", "大甲區", "外埔區", "烏日區", "大肚區", "龍井區", "霧峰區"];
     var box = document.getElementById('market');
     if(!box || !window.fetch) return;
     function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.className = cls; if(txt != null) e.textContent = txt; return e; }
@@ -618,16 +625,22 @@
     }).then(function(m){
       if(!m || !m.districts || !m.periods || !m.periods.length || !m.window_label || !m.generated_at) throw new Error('bad shape');
       var grid = box.querySelector('.mk-grid'), shown = 0;
-      // 縣市分組：market.json 的 district_city 有值才插標題（沒有就維持原本的平鋪清單）
-      var cityOf = m.district_city || {}, lastCity = null;
+      // 縣市分組：market.json 的 district_city 有值才插標題（沒有就維持原本的平鋪清單）。
+      // 每組裡「本期有數字」的區列完整卡片；樣本不足門檻的區收進一張精簡卡（只有區名＋累積筆數），
+      // 否則全部行政區列出來會出現幾十張空卡。
+      var cityOf = m.district_city || {};
+      var groups = [], cur = null;
       DIST.forEach(function(name){
         var d = m.districts[name]; if(!d) return;
         var c = cityOf[name] || '';
-        if(c && c !== lastCity){ grid.appendChild(el('div', 'mk-city', c)); lastCity = c; }
-        var card = el('div', 'mk-card'); card.appendChild(el('h4', null, name));
-        var types = d.types || [], got = 0;
+        if(!cur || c !== cur.city){ cur = { city: c, full: [], thin: [] }; groups.push(cur); }
+        var ok = (d.types || []).filter(function(t){ return typeof t.median === 'number' && typeof t.n === 'number'; });
+        (ok.length ? cur.full : cur.thin).push({ name: name, d: d, types: ok });
+      });
+      function fullCard(it){
+        var d = it.d, types = it.types, got = 0;
+        var card = el('div', 'mk-card'); card.appendChild(el('h4', null, it.name));
         types.forEach(function(t){
-          if(typeof t.median !== 'number' || typeof t.n !== 'number') return;
           var row = el('div', 'mk-row');
           var tp = el('div', 'mk-type', t.type);
           if(t.provisional === true) tp.appendChild(el('span', 'mk-ref', '參考值'));
@@ -638,9 +651,26 @@
           row.appendChild(t.provisional === true ? el('div', 'mk-n prov', '樣本僅 ' + t.n + ' 筆') : el('div', 'mk-n', t.n + ' 筆'));
           card.appendChild(row); got += t.n;
         });
-        if(!types.length || (d.samples || 0) > got)
-          card.appendChild(el('div', 'mk-wait', (types.length ? '其他型態' : '各型態') + '：樣本累積中（目前共 ' + (d.samples || 0) + ' 筆）'));
-        grid.appendChild(card); shown++;
+        if((d.samples || 0) > got)
+          card.appendChild(el('div', 'mk-wait', '其他型態：樣本累積中（目前共 ' + (d.samples || 0) + ' 筆）'));
+        return card;
+      }
+      function thinBox(list){
+        var bx = el('div', 'mk-waitbox');
+        bx.appendChild(el('h4', null, '樣本累積中'));
+        bx.appendChild(el('p', 'mk-waitnote', '本期成交筆數不足 10 筆，暫不列單價；逐期累積後會自動補上。'));
+        list.forEach(function(it){
+          var row = el('div', 'mk-waitrow');
+          row.appendChild(el('span', null, it.name));
+          row.appendChild(el('b', null, (it.d.samples || 0) + ' 筆'));
+          bx.appendChild(row);
+        });
+        return bx;
+      }
+      groups.forEach(function(g){
+        if(g.city) grid.appendChild(el('div', 'mk-city', g.city));
+        g.full.forEach(function(it){ grid.appendChild(fullCard(it)); shown++; });
+        if(g.thin.length) grid.appendChild(thinBox(g.thin));
       });
       if(!shown) throw new Error('no districts');
       var meta = box.querySelector('.mk-meta');
@@ -826,7 +856,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b284';
+const BUILD = 'b285';
 const PAGE_VER = '2026-11-21-1300' // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
