@@ -25,13 +25,16 @@
               "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
-              "wrap": true,
-              "margin": "none"
+              "wrap": false,
+              "margin": "none",
+              "gravity": "center"
             }
           ],
-          "spacing": "md",
-          "paddingAll": "6px",
-          "backgroundColor": "#1F3A34"
+          "spacing": "none",
+          "paddingAll": "0px",
+          "backgroundColor": "#1F3A34",
+          "height": "26px",
+          "justifyContent": "center"
         },
         "footer": {
           "type": "box",
@@ -260,13 +263,16 @@
               "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
-              "wrap": true,
-              "margin": "none"
+              "wrap": false,
+              "margin": "none",
+              "gravity": "center"
             }
           ],
-          "spacing": "md",
-          "paddingAll": "6px",
-          "backgroundColor": "#1F3A34"
+          "spacing": "none",
+          "paddingAll": "0px",
+          "backgroundColor": "#1F3A34",
+          "height": "26px",
+          "justifyContent": "center"
         },
         "footer": {
           "type": "box",
@@ -495,13 +501,16 @@
               "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
-              "wrap": true,
-              "margin": "none"
+              "wrap": false,
+              "margin": "none",
+              "gravity": "center"
             }
           ],
-          "spacing": "md",
-          "paddingAll": "6px",
-          "backgroundColor": "#1F3A34"
+          "spacing": "none",
+          "paddingAll": "0px",
+          "backgroundColor": "#1F3A34",
+          "height": "26px",
+          "justifyContent": "center"
         },
         "footer": {
           "type": "box",
@@ -730,13 +739,16 @@
               "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
-              "wrap": true,
-              "margin": "none"
+              "wrap": false,
+              "margin": "none",
+              "gravity": "center"
             }
           ],
-          "spacing": "md",
-          "paddingAll": "6px",
-          "backgroundColor": "#1F3A34"
+          "spacing": "none",
+          "paddingAll": "0px",
+          "backgroundColor": "#1F3A34",
+          "height": "26px",
+          "justifyContent": "center"
         },
         "footer": {
           "type": "box",
@@ -965,13 +977,16 @@
               "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
-              "wrap": true,
-              "margin": "none"
+              "wrap": false,
+              "margin": "none",
+              "gravity": "center"
             }
           ],
-          "spacing": "md",
-          "paddingAll": "6px",
-          "backgroundColor": "#1F3A34"
+          "spacing": "none",
+          "paddingAll": "0px",
+          "backgroundColor": "#1F3A34",
+          "height": "26px",
+          "justifyContent": "center"
         },
         "footer": {
           "type": "box",
