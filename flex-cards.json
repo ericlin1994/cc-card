@@ -22,7 +22,7 @@
             {
               "type": "text",
               "text": "整合全台房產產業鏈，打造高淨值人脈圈",
-              "size": "xs",
+              "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
               "wrap": true,
@@ -30,7 +30,7 @@
             }
           ],
           "spacing": "md",
-          "paddingAll": "14px",
+          "paddingAll": "6px",
           "backgroundColor": "#1F3A34"
         },
         "footer": {
@@ -228,7 +228,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card1-64528595.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card1-42d33fcb.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -257,7 +257,7 @@
             {
               "type": "text",
               "text": "首購族・換屋族・置產族・企業主・海外置產・房產同業",
-              "size": "xs",
+              "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
               "wrap": true,
@@ -265,7 +265,7 @@
             }
           ],
           "spacing": "md",
-          "paddingAll": "14px",
+          "paddingAll": "6px",
           "backgroundColor": "#1F3A34"
         },
         "footer": {
@@ -463,7 +463,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card2-41a2a089.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card2-1adee525.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -492,7 +492,7 @@
             {
               "type": "text",
               "text": "房價行情・潛銷物件・房產課程・裝修資金一條龍",
-              "size": "xs",
+              "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
               "wrap": true,
@@ -500,7 +500,7 @@
             }
           ],
           "spacing": "md",
-          "paddingAll": "14px",
+          "paddingAll": "6px",
           "backgroundColor": "#1F3A34"
         },
         "footer": {
@@ -698,7 +698,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card3-da6e7cc5.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card3-e913182c.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -727,7 +727,7 @@
             {
               "type": "text",
               "text": "15 年房產實戰・5,000+ 場講座・25 萬+ 受眾",
-              "size": "xs",
+              "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
               "wrap": true,
@@ -735,7 +735,7 @@
             }
           ],
           "spacing": "md",
-          "paddingAll": "14px",
+          "paddingAll": "6px",
           "backgroundColor": "#1F3A34"
         },
         "footer": {
@@ -933,7 +933,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card4-53c25967.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card4-19029a52.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -962,7 +962,7 @@
             {
               "type": "text",
               "text": "團結力量大，知識創造財富。房產決策我們一起看。",
-              "size": "xs",
+              "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
               "wrap": true,
@@ -970,7 +970,7 @@
             }
           ],
           "spacing": "md",
-          "paddingAll": "14px",
+          "paddingAll": "6px",
           "backgroundColor": "#1F3A34"
         },
         "footer": {
@@ -1168,7 +1168,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card5-5e22594f.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card5-79bbf68b.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -1244,7 +1244,7 @@
             }
           ],
           "spacing": "md",
-          "paddingAll": "14px",
+          "paddingAll": "6px",
           "backgroundColor": "#1F3A34"
         },
         "footer": {
@@ -1442,7 +1442,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card6-67f87c42.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card6-425f7679.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
