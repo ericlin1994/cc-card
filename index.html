@@ -752,17 +752,19 @@
   #ach .ax-row:first-child{border-top:0;padding-top:2px}
   #ach .ax-row b{color:#7A5C26;font-weight:800;white-space:nowrap;font-size:13px}
   #ach .ax-row span{font-size:13px;line-height:1.65;color:#5F706A}
-  #ach .ax-ph{display:grid;gap:12px;margin:0 16px 10px}
+  /* 實績 9 張活動照：單欄會太長，改兩欄（窄螢幕仍單欄） */
+  #ach .ax-ph{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:0 16px 10px}
+  @media (max-width:380px){#ach .ax-ph{grid-template-columns:1fr}}
   #ach .ax-ph figure{margin:0;background:#fff;border:1px solid rgba(31,58,52,.10);border-radius:14px;overflow:hidden}
   #ach .ax-ph img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
   #ach .ax-ph figcaption{padding:8px 13px 10px;font-size:12.5px;color:#5F706A}
   </style>
   <section id="ach">
   <div class="sec-title">ACHIEVEMENT｜<em>實績</em></div>
-  <p class="ax-sub">創業 15 年來累積的講座、活動與據點</p>
+  <p class="ax-sub">創業 15 年來累積的講座、活動與據點（照片取自官方網站「活動回顧」）</p>
   <div class="ax-num"><div><b>創業 15 年</b><span>房產與財商實戰</span></div><div><b>5,000+ 場</b><span>財商講座</span></div><div><b>25 萬+</b><span>講座累積受眾</span></div><div><b>600 人</b><span>單場活動最高人數</span></div></div>
   <div class="ax-time"><div class="ax-row"><b>2016–2019</b><span>成立房地產團隊，專營中古屋與舊屋翻新改造</span></div><div class="ax-row"><b>2019–2022</b><span>舉辦多場預售屋／賞屋等 VIP 餐會活動</span></div><div class="ax-row"><b>2022–2024</b><span>整合教育培訓與房產周邊資源，發展會員經濟模型；串聯北中南房產團隊與建商、代銷合作，多場百人以上分享會，單場最高 600 人</span></div><div class="ax-row"><b>2025</b><span>啟動「BeamLink Club 房產俱樂部」計畫，推出線上／實體會員制服務，建構產業生態鏈與會員價值營運平台</span></div></div>
-  <div class="ax-ph" data-album="ach"><figure><img src="img/ach1-v1.jpg" alt="會員活動" loading="lazy" decoding="async"><figcaption>會員活動</figcaption></figure><figure><img src="img/ach2-v1.jpg" alt="講座與交流聚會" loading="lazy" decoding="async"><figcaption>講座與交流聚會</figcaption></figure><figure><img src="img/ach3-v1.jpg" alt="活動現場" loading="lazy" decoding="async"><figcaption>活動現場</figcaption></figure></div>
+  <div class="ax-ph" data-album="ach"><figure><img src="img/ach1-v1.jpg" alt="俱樂部品牌活動｜讓夢想正式啟航" loading="lazy" decoding="async"><figcaption>俱樂部品牌活動｜讓夢想正式啟航</figcaption></figure><figure><img src="img/ach2-v1.jpg" alt="高端圈層聚會｜跨界菁英的私密沙龍" loading="lazy" decoding="async"><figcaption>高端圈層聚會｜跨界菁英的私密沙龍</figcaption></figure><figure><img src="img/ach3-v1.jpg" alt="房產人脈交流會｜共學、共好、共贏" loading="lazy" decoding="async"><figcaption>房產人脈交流會｜共學、共好、共贏</figcaption></figure><figure><img src="img/ach4-v1.jpg" alt="主題交流與課程｜知識 × 人脈的能量場" loading="lazy" decoding="async"><figcaption>主題交流與課程｜知識 × 人脈的能量場</figcaption></figure><figure><img src="img/ach5-v1.jpg" alt="實戰賞屋團｜把課上在現場" loading="lazy" decoding="async"><figcaption>實戰賞屋團｜把課上在現場</figcaption></figure><figure><img src="img/ach6-v1.jpg" alt="預售屋VIP餐會｜與建商面對面" loading="lazy" decoding="async"><figcaption>預售屋VIP餐會｜與建商面對面</figcaption></figure><figure><img src="img/ach7-v1.jpg" alt="簽約的那一刻｜幸福成交故事" loading="lazy" decoding="async"><figcaption>簽約的那一刻｜幸福成交故事</figcaption></figure><figure><img src="img/ach8-v1.jpg" alt="寓教於樂｜吃喝玩樂也能學" loading="lazy" decoding="async"><figcaption>寓教於樂｜吃喝玩樂也能學</figcaption></figure><figure><img src="img/ach9-v1.jpg" alt="公益行動｜讓愛與你我同行" loading="lazy" decoding="async"><figcaption>公益行動｜讓愛與你我同行</figcaption></figure></div>
   </section>
 
   <style>
@@ -1013,7 +1015,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b304';
+const BUILD = 'b305';
 const PAGE_VER = '2026-11-21-1300' // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
