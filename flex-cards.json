@@ -1195,6 +1195,16 @@
           "layout": "vertical",
           "contents": [
             {
+              "type": "text",
+              "text": "BeamLink Club 台北會員總部／台中會員中心",
+              "size": "xxs",
+              "weight": "regular",
+              "color": "#A3B5AE",
+              "wrap": true,
+              "margin": "none",
+              "align": "center"
+            },
+            {
               "type": "box",
               "layout": "horizontal",
               "contents": [
@@ -1243,9 +1253,12 @@
               "margin": "none"
             }
           ],
-          "spacing": "md",
-          "paddingAll": "6px",
-          "backgroundColor": "#1F3A34"
+          "spacing": "sm",
+          "paddingAll": "12px",
+          "backgroundColor": "#142924",
+          "cornerRadius": "18px",
+          "borderWidth": "1px",
+          "borderColor": "#485854"
         },
         "footer": {
           "type": "box",
@@ -1442,7 +1455,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card6-d2feade4.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card6-a16a172a.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
