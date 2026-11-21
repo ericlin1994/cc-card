@@ -1215,65 +1215,16 @@
               "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
-              "wrap": true,
-              "margin": "none",
-              "align": "center"
-            },
-            {
-              "type": "box",
-              "layout": "horizontal",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "vertical",
-                  "contents": [
-                    {
-                      "type": "image",
-                      "url": "https://cc.cardtaiwan.com/img/icon-briefcase-w1.png",
-                      "size": "20px",
-                      "aspectRatio": "1:1",
-                      "aspectMode": "cover",
-                      "flex": 0
-                    },
-                    {
-                      "type": "text",
-                      "text": "了解服務內容",
-                      "size": "xxs",
-                      "weight": "bold",
-                      "color": "#FFFFFF",
-                      "wrap": true,
-                      "align": "center"
-                    }
-                  ],
-                  "spacing": "xs",
-                  "paddingAll": "10px",
-                  "background": {
-                    "type": "linearGradient",
-                    "angle": "90deg",
-                    "startColor": "#4E7169",
-                    "endColor": "#22433B"
-                  },
-                  "cornerRadius": "100px",
-                  "flex": 1,
-                  "borderWidth": "1px",
-                  "borderColor": "#63827B",
-                  "action": {
-                    "type": "uri",
-                    "label": "了解服務內容",
-                    "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=cc&to=service&u=https%3A%2F%2Fcc.cardtaiwan.com%2F%3Fgo%3Dservice%23service"
-                  }
-                }
-              ],
-              "spacing": "none",
-              "margin": "none"
+              "wrap": false,
+              "align": "center",
+              "gravity": "center"
             }
           ],
-          "spacing": "sm",
-          "paddingAll": "12px",
-          "backgroundColor": "#142924",
-          "cornerRadius": "18px",
-          "borderWidth": "1px",
-          "borderColor": "#485854"
+          "spacing": "none",
+          "paddingAll": "0px",
+          "backgroundColor": "#1F3A34",
+          "height": "26px",
+          "justifyContent": "center"
         },
         "footer": {
           "type": "box",
@@ -1470,7 +1421,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card6-a16a172a.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card6-ac9b3370.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
