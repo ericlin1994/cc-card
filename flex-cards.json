@@ -1644,6 +1644,38 @@
                   ],
                   "spacing": "sm",
                   "margin": "none"
+                },
+                {
+                  "type": "separator",
+                  "margin": "lg",
+                  "color": "#42544E"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "🌏",
+                      "size": "lg",
+                      "weight": "regular",
+                      "color": "#D9B98C",
+                      "wrap": false,
+                      "flex": 1
+                    },
+                    {
+                      "type": "text",
+                      "text": "香港 中環花園道33號12樓",
+                      "size": "sm",
+                      "weight": "regular",
+                      "color": "#FFFFFF",
+                      "wrap": true,
+                      "margin": "none",
+                      "flex": 7
+                    }
+                  ],
+                  "spacing": "sm",
+                  "margin": "none"
                 }
               ],
               "spacing": "none",
