@@ -27,6 +27,7 @@
               "color": "#A3B5AE",
               "wrap": false,
               "margin": "none",
+              "align": "center",
               "gravity": "center"
             }
           ],
@@ -265,6 +266,7 @@
               "color": "#A3B5AE",
               "wrap": false,
               "margin": "none",
+              "align": "center",
               "gravity": "center"
             }
           ],
@@ -503,6 +505,7 @@
               "color": "#A3B5AE",
               "wrap": false,
               "margin": "none",
+              "align": "center",
               "gravity": "center"
             }
           ],
@@ -741,6 +744,7 @@
               "color": "#A3B5AE",
               "wrap": false,
               "margin": "none",
+              "align": "center",
               "gravity": "center"
             }
           ],
@@ -979,6 +983,7 @@
               "color": "#A3B5AE",
               "wrap": false,
               "margin": "none",
+              "align": "center",
               "gravity": "center"
             }
           ],
