@@ -726,7 +726,7 @@
           "contents": [
             {
               "type": "text",
-              "text": "15 年房產實戰・5,000+ 場講座・25 萬+ 受眾",
+              "text": "創業 15 年・5,000+ 場講座・25 萬+ 受眾",
               "size": "xxs",
               "weight": "regular",
               "color": "#A3B5AE",
@@ -933,7 +933,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://cc.cardtaiwan.com/img/card4-24ffdade.jpg",
+          "url": "https://cc.cardtaiwan.com/img/card4-b4ed7f6c.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -1570,6 +1570,38 @@
                     {
                       "type": "text",
                       "text": "sunia060709@gmail.com",
+                      "size": "sm",
+                      "weight": "regular",
+                      "color": "#FFFFFF",
+                      "wrap": true,
+                      "margin": "none",
+                      "flex": 7
+                    }
+                  ],
+                  "spacing": "sm",
+                  "margin": "none"
+                },
+                {
+                  "type": "separator",
+                  "margin": "lg",
+                  "color": "#42544E"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "✉️",
+                      "size": "lg",
+                      "weight": "regular",
+                      "color": "#D9B98C",
+                      "wrap": false,
+                      "flex": 1
+                    },
+                    {
+                      "type": "text",
+                      "text": "beamlink2025@gmail.com（公司）",
                       "size": "sm",
                       "weight": "regular",
                       "color": "#FFFFFF",
